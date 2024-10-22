@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <title>Chat GPT 개발</title>
+    <script src="vision.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 20px auto;
+        }
+
+        input[type="button"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="button"]:hover {
+            background-color: #218838;
+        }
+
+        #gimage {
+            display: block;
+            margin: 20px auto;
+            border: 5px solid #555;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+
+        textarea {
+            width: 100%;
+            max-width: 100%;
+            margin: 20px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>정우진의 Google Vision API 놀이터</h1>
+
+        <input type="file" onchange="uploadFiles(this.files)">
+        <input type="button" onclick="analyze()" value="이미지 분석">
+
+        <img id="gimage" alt="Uploaded Image">
+
+        <textarea id="result" cols="30" rows="10" placeholder="분석 결과가 여기에 나타납니다..."></textarea>
+    </div>
+</body>
+</html>
