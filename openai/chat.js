@@ -1,5 +1,5 @@
 
-OPENAPI_KEY = ""
+OPENAPI_KEY = 
 
 
 smodel = "gpt-3.5-turbo"
@@ -28,7 +28,6 @@ function talk(){
         contentType: "application/json; charset=utf-8"
     }).done( function(response){
         console.log(response)
-        //alert(response.choices[0].message.content)
         txtOut.value = (response.choices[0].message.content)
     }).fail(function(error){
         console.log(error)
@@ -57,7 +56,6 @@ function draw(){
         contentType: "application/json; charset=utf-8"
     }).done( function(response){
         console.log(response)
-        //alert(response.choices[0].message.content)
         gimage.src = response.data[0].url
         gimage2.src = response.data[1].url
     }).fail(function(error){
